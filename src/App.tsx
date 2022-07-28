@@ -1,6 +1,10 @@
+import Navbar from './Navbar'
+
 function App (): JSX.Element {
   return (
-    <div className='text-red-400'>App Working</div>
+    <main id='App'>
+      <Navbar />
+    </main>
   )
 }
 
