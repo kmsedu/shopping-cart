@@ -5,7 +5,7 @@ export default function Navbar (): JSX.Element {
     <nav
       className='flex justify-between items-center
                   text-white border-b-yellow-400 border-b-2
-                    list-none font-nav shadow-[0_0_3px_rgba(0,0,0,0.2)]'
+                    list-none font-nav shadow-[0_0_8px_rgba(0,0,0,0.9)] z-10'
     >
       <h1 className='text-3xl font-display flex-[3] ml-2'>
         MOON<span className='text-yellow-400'>BASE</span>
