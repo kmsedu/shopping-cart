@@ -7,7 +7,7 @@ import Shop from '../routes/Shop'
 import About from '../routes/About'
 import Footer from './Footer'
 import data from '../data'
-import ShopItemRoute from '../components/ShopItemRoute'
+import ShopItemRoute from '../routes/ShopItemRoute'
 
 export default function RouteSwitch (): JSX.Element {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
