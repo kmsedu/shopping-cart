@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Navbar from './Navbar'
+import Navbar from '../Navbar'
 
 describe('Navbar should', () => {
   it('Contain a main heading MOONBASE', () => {

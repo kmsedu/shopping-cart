@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './Navbar'
-import Home from './Home'
-import Shop from './Shop'
-import About from './About'
+import Home from '../routes/Home'
+import Shop from '../routes/Shop'
+import About from '../routes/About'
 
 export default function RouteSwitch (): JSX.Element {
   return (
