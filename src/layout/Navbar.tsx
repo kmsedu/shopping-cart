@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar (): JSX.Element {
   return (
-    <nav className='flex justify-between items-center
+    <nav
+      className='flex justify-between items-center
                   text-white border-b-yellow-400 border-b-2
                     list-none font-nav shadow-[0_0_3px_rgba(0,0,0,0.2)]'
     >

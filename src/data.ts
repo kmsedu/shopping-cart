@@ -5,14 +5,56 @@ export default [
     id: nanoid(),
     name: 'Lenovo 15.6" IdeaPad Slim 3i',
     imgSrc: './assets/ideapadslim15i.png',
-    price: 697.00,
+    price: 697.0,
     inStock: true
   },
   {
     id: nanoid(),
-    name: 'Macbook Air 13.6" M2 Chip Silver',
+    name: 'MacBook Air 13.6" M2 Chip Silver',
     imgSrc: './assets/macbookair13.png',
-    price: 1707.00,
+    price: 1707.0,
+    inStock: true
+  },
+  {
+    id: nanoid(),
+    name: 'MacBook Pro 14" 10-Core M2 Silver',
+    imgSrc: './assets/macbook14.png',
+    price: 3347.0,
+    inStock: true
+  },
+  {
+    id: nanoid(),
+    name: 'Macbook Pro 16" 32-Core M2 Max',
+    imgSrc: './assets/macbook16.png',
+    price: 4997.0,
+    inStock: true
+  },
+  {
+    id: nanoid(),
+    name: 'Acer 15.6" Nitro 5 Gaming Notebook i7',
+    imgSrc: './assets/nitro5.png',
+    price: 1697.0,
+    inStock: true
+  },
+  {
+    id: nanoid(),
+    name: 'ASUS 15.6" ROG Strix G15 Laptop',
+    imgSrc: './assets/strixg15.png',
+    price: 1997.0,
+    inStock: true
+  },
+  {
+    id: nanoid(),
+    name: 'ASUS 15.6" TUF Gaming F15 Notebook i7',
+    imgSrc: './assets/tuff15.png',
+    price: 2697.0,
+    inStock: true
+  },
+  {
+    id: nanoid(),
+    name: 'ASUS 15.6" VivoBook Core i7',
+    imgSrc: './assets/vivobook15.png',
+    price: 1397.0,
     inStock: true
   }
 ]

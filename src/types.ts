@@ -8,6 +8,13 @@ export interface CartItem {
 }
 
 export interface ShopProps {
-  cartItems: CartItem[]
   addItemToCart: Function
+}
+
+export interface ShopItemProps extends ShopProps {
+  id: string
+  name: string
+  imgSrc: string
+  price: number
+  inStock: boolean
 }
