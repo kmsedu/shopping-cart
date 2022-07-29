@@ -11,8 +11,6 @@ import data from '../data'
 export default function RouteSwitch (): JSX.Element {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
-  console.log(cartItems)
-
   const addItemToCart = (id: string): void => {
     setCartItems((prevCartItems) => {
       const itemToAdd = data.find((dataItem) => dataItem.id === id)
@@ -25,7 +23,7 @@ export default function RouteSwitch (): JSX.Element {
 
   return (
     <BrowserRouter>
-      <main className='flex flex-col justify-between h-screen'>
+      <main className='flex flex-col justify-between h-screen bg-slate-900'>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
