@@ -1,4 +1,8 @@
-export default function Shop (): JSX.Element {
+import { ShopProps } from '../types'
+
+export default function Shop (props: ShopProps): JSX.Element {
+  const { cartItems } = props
+  console.log(cartItems)
   return (
     <main className='flex flex-col h-full overflow-y-hidden'>
       <div className='hero flex justify-center items-center py-12 bg-slate-200'>
