@@ -1,45 +1,53 @@
 import { Link } from 'react-router-dom'
+import { NavbarProps } from '../types'
 
-export default function Navbar (): JSX.Element {
+export default function Navbar (props: NavbarProps): JSX.Element {
+  const { toggleDisplayCart, cartDisplayed } = props
   return (
     <nav
-      className='flex justify-between items-center
-                  text-white border-b-yellow-400 border-b-2
-                    list-none font-nav shadow-[0_0_8px_rgba(0,0,0,0.9)] z-10'
+      className='z-10 flex list-none
+                  items-center justify-between border-b-2
+                    border-b-yellow-400 font-nav text-white shadow-[0_0_8px_rgba(0,0,0,0.9)]'
     >
-      <h1 className='text-3xl font-display flex-[3] ml-2'>
+      <h1 className='ml-2 flex-[3] font-display text-3xl'>
         MOON<span className='text-yellow-400'>BASE</span>
       </h1>
       <div className='flex flex-[2] justify-center'>
         <Link
           to='/'
-          className='min-w-[95px] text-center hover:text-yellow-400 transition-all
-          duration-150 py-2 px-6 border-r border-l border-slate-800'
+          className='min-w-[95px] border-r border-l border-slate-800
+          py-2 px-6 text-center transition-all duration-150 hover:text-yellow-400'
         >
           Home
         </Link>
         <Link
           to='/shop'
-          className='min-w-[95px] text-center hover:text-yellow-400 transition-color
-          duration-150 py-2 px-6 border-r border-slate-800'
+          className='transition-color min-w-[95px] border-r border-slate-800
+          py-2 px-6 text-center duration-150 hover:text-yellow-400'
         >
           Shop
         </Link>
         <Link
           to='/about'
-          className='min-w-[95px] text-center hover:text-yellow-400 transition-all
-          duration-150 py-2 px-6 border-r border-slate-800'
+          className='min-w-[95px] border-r border-slate-800 py-2
+          px-6 text-center transition-all duration-150 hover:text-yellow-400'
         >
           About
         </Link>
       </div>
       <div className='flex flex-1 justify-center'>
-        <li
-          className='bg-slate-800
-          px-4 mx-2 rounded-sm'
+        <button
+          className={`mx-2
+          rounded-sm px-4 transition-colors
+          ${
+            cartDisplayed
+              ? 'bg-yellow-400 text-black'
+              : 'bg-slate-700 text-white'
+          }`}
+          onClick={() => toggleDisplayCart()}
         >
           Cart
-        </li>
+        </button>
       </div>
     </nav>
   )

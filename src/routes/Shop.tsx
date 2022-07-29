@@ -11,11 +11,11 @@ export default function Shop (props: ShopProps): JSX.Element {
     )
   })
   return (
-    <main className='flex flex-col h-full overflow-y-hidden'>
-      <div className='hero flex justify-center items-center py-16 text-white text-3xl bg-shop-hero bg-center bg-cover'>
+    <main className='flex h-full flex-col overflow-y-hidden'>
+      <div className='hero flex items-center justify-center bg-shop-hero bg-cover bg-center py-16 text-3xl text-white'>
         <p> </p>
       </div>
-      <section className='flex-[4] bg-neutral-200 p-8 grid grid-cols-auto-fit gap-8 auto-rows-[220px] overflow-auto'>
+      <section className='grid flex-[4] auto-rows-[220px] grid-cols-auto-fit gap-8 overflow-auto bg-neutral-200 p-8'>
         {shopItemElements}
       </section>
     </main>

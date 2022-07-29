@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartItem } from '../types'
 import Navbar from './Navbar'
+import Cart from '../components/Cart'
 import Home from '../routes/Home'
 import Shop from '../routes/Shop'
 import About from '../routes/About'
@@ -12,8 +13,7 @@ import ShopItemRoute from '../routes/ShopItemRoute'
 export default function RouteSwitch (): JSX.Element {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [cartTotal, setCartTotal] = useState(0)
-
-  console.log(cartItems)
+  const [cartDisplayed, setCartDisplayed] = useState(true)
 
   useEffect(() => {
     let total = 0
@@ -50,17 +50,33 @@ export default function RouteSwitch (): JSX.Element {
     })
   }
 
+  const toggleDisplayCart = (): void => {
+    setCartDisplayed(!cartDisplayed)
+  }
+
   return (
     <BrowserRouter>
-      <main className='flex flex-col justify-between h-screen bg-slate-900'>
-        <Navbar />
+      {cartDisplayed && <Cart cartItems={cartItems} cartTotal={cartTotal} />}
+      <main
+        onClick={() => {
+          if (cartDisplayed) toggleDisplayCart()
+        }}
+        className='flex h-screen flex-col justify-between bg-slate-900'
+      >
+        <Navbar
+          toggleDisplayCart={toggleDisplayCart}
+          cartDisplayed={cartDisplayed}
+        />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route
             path='/shop'
             element={<Shop addItemToCart={addItemToCart} />}
           />
-          <Route path='/shop/:id' element={<ShopItemRoute />} />
+          <Route
+            path='/shop/:id'
+            element={<ShopItemRoute addItemToCart={addItemToCart} />}
+          />
           <Route path='/about' element={<About />} />
         </Routes>
         <Footer />

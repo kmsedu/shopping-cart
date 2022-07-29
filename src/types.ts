@@ -18,3 +18,13 @@ export interface ShopItemProps extends ShopProps {
   price: number
   inStock: boolean
 }
+
+export interface CartProps {
+  cartItems: CartItem[]
+  cartTotal: number
+}
+
+export interface NavbarProps {
+  toggleDisplayCart: Function
+  cartDisplayed: boolean
+}

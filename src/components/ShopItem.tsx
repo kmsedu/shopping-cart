@@ -3,18 +3,20 @@ import { ShopItemProps } from '../types'
 
 export default function ShopItem (props: ShopItemProps): JSX.Element {
   return (
-    <Link to={`/shop/${props.id}`} className='inline-flex'>
-      <div className='min-w-[400px] bg-white flex rounded-lg items-center justify-evenly shadow-md hover:scale-[1.02] transition-transform transform-gpu'>
-        <div className='border-r h-full flex items-center'>
+    <Link to={`/shop/${props.id}`} className='flex justify-self-center'>
+      <div className='flex min-w-[400px] transform-gpu items-center justify-evenly rounded-lg bg-white shadow-md transition-transform hover:scale-[1.02]'>
+        <div className='flex h-full items-center border-r'>
           <img src={props.imgSrc} />
         </div>
-        <div className='flex flex-col justify-around h-full items-start bg-slate-100 flex-1 p-6 rounded-lg'>
-          <p className='text-slate-600 text-sm max-w-[200px]'>{props.name}</p>
-          <p className='text-2xl font-black text-blue-900 flex-1 flex items-center self-end'>
+        <div className='flex h-full flex-1 flex-col items-start justify-around rounded-lg p-6'>
+          <p className='max-w-[200px] text-sm text-slate-600'>{props.name}</p>
+          <p className='flex flex-1 items-center self-end text-2xl font-black text-blue-900'>
             ${props.price}.00
           </p>
           <button
-            className='bg-yellow-400 py-2 px-4 rounded text-sm text-slate-800 shadow self-end'
+            className='self-end rounded bg-yellow-400 py-2 px-4
+            text-sm text-slate-800 shadow
+            transition-colors hover:bg-yellow-500 active:bg-yellow-300'
             type='button'
             onClick={event => {
               event?.preventDefault()
