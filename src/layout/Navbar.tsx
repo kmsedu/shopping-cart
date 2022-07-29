@@ -13,21 +13,21 @@ export default function Navbar (): JSX.Element {
       <div className='flex flex-[2] justify-center'>
         <Link
           to='/'
-          className='hover:text-yellow-400 transition-all
+          className='min-w-[95px] text-center hover:text-yellow-400 transition-all
           duration-150 py-2 px-6 border-r border-l border-slate-800'
         >
           Home
         </Link>
         <Link
           to='/shop'
-          className='hover:text-yellow-400 transition-color
+          className='min-w-[95px] text-center hover:text-yellow-400 transition-color
           duration-150 py-2 px-6 border-r border-slate-800'
         >
           Shop
         </Link>
         <Link
           to='/about'
-          className='hover:text-yellow-400 transition-all
+          className='min-w-[95px] text-center hover:text-yellow-400 transition-all
           duration-150 py-2 px-6 border-r border-slate-800'
         >
           About
