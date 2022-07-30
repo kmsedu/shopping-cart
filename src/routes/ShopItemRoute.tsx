@@ -16,7 +16,7 @@ export default function ShopItemRoute (props: ShopProps): JSX.Element {
   return (
     <main className='flex h-full font-main'>
       <div className='flex h-full items-center bg-white'>
-        <img src={`../${itemData.imgSrc}`} />
+        <img src={itemData.imgSrc} />
       </div>
       <div className='relative flex flex-1 flex-col justify-center bg-neutral-100 p-8'>
         <Link
