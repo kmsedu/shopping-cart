@@ -8,12 +8,15 @@ module.exports = {
     extend: {
       fontFamily: {
         display: '"Expletus Sans"',
-        nav: '"Inder"'
+        nav: '"Inder"',
+        main: '"Heebo"',
+        title: '"Cabin"'
       },
       backgroundImage: {
         'shop-hero':
           "linear-gradient(to bottom, rgba(0, 0, 0, 0), #e5e5e5), url('../public/assets/shop-hero-min.jpg')",
-        'home-hero': 'linear-gradient(to bottom, rgba(0, 0, 0, 0), #e5e5e5), url(../public/assets/home-hero-min.jpg)',
+        'home-hero':
+          'linear-gradient(to bottom, rgba(0, 0, 0, 0), #e5e5e5), url(../public/assets/home-hero-min.jpg)',
         'home-shop': 'url(../public/assets/home-shop-min.jpg)'
       }
     }

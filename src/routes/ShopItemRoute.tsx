@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { Link, useMatch } from 'react-router-dom'
 import data from '../data'
 import { ShopProps } from '../types'
@@ -12,7 +14,7 @@ export default function ShopItemRoute (props: ShopProps): JSX.Element {
 
   const { addItemToCart } = props
   return (
-    <main className='flex h-full'>
+    <main className='flex h-full font-main'>
       <div className='flex h-full items-center bg-white'>
         <img src={`../${itemData.imgSrc}`} />
       </div>
@@ -23,7 +25,7 @@ export default function ShopItemRoute (props: ShopProps): JSX.Element {
         >
           X
         </Link>
-        <h2 className='text-2xl'>{itemData.name}</h2>
+        <h2 className='text-2xl font-title'>{itemData.name}</h2>
         <p className='my-8 max-w-[600px] leading-8'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
           voluptate esse, enim optio consequuntur non eius totam quidem natus
@@ -35,10 +37,10 @@ export default function ShopItemRoute (props: ShopProps): JSX.Element {
         </p>
         <button
           type='button'
-          className='self-start rounded-lg bg-yellow-400 py-4 px-8'
+          className='self-start rounded-lg bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 py-4 px-8'
           onClick={() => addItemToCart(itemData.id)}
         >
-          Add to cart
+          <FontAwesomeIcon icon={solid('add')} /> Add to cart
         </button>
       </div>
     </main>

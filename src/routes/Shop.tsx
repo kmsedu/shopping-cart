@@ -11,7 +11,7 @@ export default function Shop (props: ShopProps): JSX.Element {
     )
   })
   return (
-    <main className='flex h-full flex-col overflow-y-hidden'>
+    <main className='font-main flex h-full flex-col overflow-y-hidden'>
       <div className='hero flex items-center justify-center bg-shop-hero bg-cover bg-center py-16 text-3xl text-white'>
         <p> </p>
       </div>

@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom'
 import { NavbarProps } from '../types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 export default function Navbar (props: NavbarProps): JSX.Element {
   const { toggleDisplayCart, cartDisplayed } = props
   return (
     <nav
       className='z-10 flex list-none
-                  items-center justify-between 
-                    font-nav text-white shadow-[0_0_8px_rgba(0,0,0,0.9)]'
+                items-center justify-between
+                font-nav text-white shadow-[0_0_8px_rgba(0,0,0,0.9)]'
     >
       <h1 className='ml-2 flex-[3] font-display text-3xl'>
         MOON<span className='text-yellow-400'>BASE</span>
@@ -47,6 +49,8 @@ export default function Navbar (props: NavbarProps): JSX.Element {
           onClick={() => toggleDisplayCart()}
         >
           Cart
+          {' '}
+          <FontAwesomeIcon icon={solid('shopping-cart')} size='xs' />
         </button>
       </div>
     </nav>

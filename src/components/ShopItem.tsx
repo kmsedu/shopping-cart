@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { Link } from 'react-router-dom'
 import { ShopItemProps } from '../types'
 
@@ -16,13 +18,15 @@ export default function ShopItem (props: ShopItemProps): JSX.Element {
           <button
             className='self-end rounded bg-yellow-400 py-2 px-4
             text-sm text-slate-800 shadow
-            transition-colors hover:bg-yellow-500 active:bg-yellow-300'
+            transition-colors hover:bg-yellow-300 active:bg-yellow-500'
             type='button'
             onClick={event => {
               event?.preventDefault()
               props.addItemToCart(props.id)
             }}
           >
+            <FontAwesomeIcon icon={solid('add')} />
+            {' '}
             Add to cart
           </button>
         </div>
