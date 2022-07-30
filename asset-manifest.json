@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.0c77536c.css",
+    "main.js": "/shopping-cart/static/js/main.c19aa5c9.js",
+    "static/media/shop-hero-min.jpg": "/shopping-cart/static/media/shop-hero-min.b1b6d377151eecbb1ce2.jpg",
+    "static/media/about-photo3.jpg": "/shopping-cart/static/media/about-photo3.4c721cd82b49d5eb39db.jpg",
+    "static/media/home-shop-min.jpg": "/shopping-cart/static/media/home-shop-min.a9e6bbcbb0e71ef9d5c1.jpg",
+    "static/media/home-hero-min.jpg": "/shopping-cart/static/media/home-hero-min.b212c8c58e8ffdc56261.jpg",
+    "index.html": "/shopping-cart/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.0c77536c.css",
+    "static/js/main.c19aa5c9.js"
+  ]
+}
