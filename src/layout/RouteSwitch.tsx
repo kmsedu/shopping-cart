@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { CartItem } from '../types'
 import Navbar from './Navbar'
 import Cart from '../components/Cart'
@@ -64,7 +64,7 @@ export default function RouteSwitch (): JSX.Element {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {cartDisplayed && (
         <Cart
           cartItems={cartItems}
@@ -96,6 +96,6 @@ export default function RouteSwitch (): JSX.Element {
         </Routes>
         <Footer />
       </main>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
