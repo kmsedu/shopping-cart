@@ -6,8 +6,8 @@ export default function Navbar (props: NavbarProps): JSX.Element {
   return (
     <nav
       className='z-10 flex list-none
-                  items-center justify-between border-b-2
-                    border-b-yellow-400 font-nav text-white shadow-[0_0_8px_rgba(0,0,0,0.9)]'
+                  items-center justify-between 
+                    font-nav text-white shadow-[0_0_8px_rgba(0,0,0,0.9)]'
     >
       <h1 className='ml-2 flex-[3] font-display text-3xl'>
         MOON<span className='text-yellow-400'>BASE</span>
