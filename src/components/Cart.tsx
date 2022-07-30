@@ -24,7 +24,7 @@ export default function Cart (props: CartProps): JSX.Element {
     )
   })
   return (
-    <div className='min-w-[350px] absolute right-0 top-10 z-20 flex flex-col border-t-2 border-yellow-400 bg-white shadow-lg shadow-gray-400'>
+    <div className='min-w-[350px] absolute right-0 top-10 z-20 flex flex-col border-t-2 border-yellow-400 bg-white shadow-lg shadow-gray-600'>
       {cartItemElements}
       <p className='bg-gray-200 p-2 text-right'>
         <strong>Total: </strong>${cartTotal}.00

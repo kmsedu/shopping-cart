@@ -1,23 +1,33 @@
-export default function Home (): JSX.Element {
+import ShopItem from '../components/ShopItem'
+import data from '../data'
+import { Link } from 'react-router-dom'
+
+export default function Home ({
+  addItemToCart
+}: {
+  addItemToCart: Function
+}): JSX.Element {
+  const shopItemElements = [data[0], data[1]].map(dataItem => {
+    return (
+      <ShopItem {...dataItem} addItemToCart={addItemToCart} key={dataItem.id} />
+    )
+  })
+
   return (
-    <main className='flex flex-1 flex-col justify-between'>
-      <div className='hero flex items-center justify-center bg-slate-200 py-12'>
-        This is where hero stuff goes
+    <main className='flex flex-1 flex-col gap-12 bg-neutral-200'>
+      <div className='hero flex items-center justify-center bg-gray-200 py-12 bg-home-hero bg-cover bg-right text-4xl text-white'>
+        <span className='drop-shadow-[0_0_2px_#555]'>Your laptop experts</span>
       </div>
-      <section className='mx-24 flex items-center justify-between gap-2'>
-        <div className='flex h-36 flex-1 items-center justify-center bg-slate-300'>
-          Component 1
-        </div>
-        <div className='flex h-48 flex-[2] items-center justify-center bg-slate-300'>
-          Component 2
-        </div>
-        <div className='flex h-36 flex-1 items-center justify-center bg-slate-300'>
-          Component 3
-        </div>
+      <h1 className='text-center text-gray-600 text-2xl'>Today's deals</h1>
+      <section className='mx-4 flex items-center justify-center gap-2'>
+        {shopItemElements}
       </section>
-      <div className='hero flex items-center justify-center bg-slate-200 py-12'>
-        This is where hero stuff goes
-      </div>
+      <Link
+        to='/shop'
+        className='mx-24 my-12 flex items-center justify-center bg-home-shop bg-center bg-cover rounded text-white text-2xl hover:brightness-90 transition-all py-12'
+      >
+        Go to store
+      </Link>
     </main>
   )
 }

@@ -6,7 +6,7 @@ export default function ShopItem (props: ShopItemProps): JSX.Element {
     <Link to={`/shop/${props.id}`} className='flex justify-self-center'>
       <div className='flex min-w-[400px] transform-gpu items-center justify-evenly rounded-lg bg-white shadow-md transition-transform hover:scale-[1.02]'>
         <div className='flex h-full items-center border-r'>
-          <img src={props.imgSrc} />
+          <img src={props.imgSrc} className='rounded' />
         </div>
         <div className='flex h-full flex-1 flex-col items-start justify-around rounded-lg p-6'>
           <p className='max-w-[200px] text-sm text-slate-600'>{props.name}</p>

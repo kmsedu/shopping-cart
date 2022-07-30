@@ -13,7 +13,7 @@ import ShopItemRoute from '../routes/ShopItemRoute'
 export default function RouteSwitch (): JSX.Element {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [cartTotal, setCartTotal] = useState(0)
-  const [cartDisplayed, setCartDisplayed] = useState(true)
+  const [cartDisplayed, setCartDisplayed] = useState(false)
 
   useEffect(() => {
     let total = 0
@@ -83,7 +83,7 @@ export default function RouteSwitch (): JSX.Element {
           cartDisplayed={cartDisplayed}
         />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home addItemToCart={addItemToCart} />} />
           <Route
             path='/shop'
             element={<Shop addItemToCart={addItemToCart} />}

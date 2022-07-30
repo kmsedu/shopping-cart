@@ -31,7 +31,7 @@ export default [
   },
   {
     id: 'K1XUvFwmidvuzHhtH3yXD',
-    name: 'Acer 15.6" Nitro 5 Gaming Notebook i7',
+    name: 'Acer 15.6" Nitro 5 Notebook i7',
     imgSrc: '/assets/nitro5.png',
     price: 1697.0,
     inStock: true
@@ -45,7 +45,7 @@ export default [
   },
   {
     id: 'UwSwJHKXGJ4VS3h8K94sJ',
-    name: 'ASUS 15.6" TUF Gaming F15 Notebook i7',
+    name: 'ASUS 15.6" TUF Gaming Notebook i7',
     imgSrc: '/assets/tuff15.png',
     price: 2697.0,
     inStock: true
