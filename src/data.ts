@@ -2,7 +2,7 @@ export default [
   {
     id: '5wuzIrxdBNAWiOVvdRgv7',
     name: 'Lenovo 15.6" IdeaPad Slim 3i',
-    imgSrc: '../assets/ideapadslim15i.png',
+    imgSrc: '/assets/ideapadslim15i.png',
     price: 697.0,
     inStock: true
   },
