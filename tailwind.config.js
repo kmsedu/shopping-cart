@@ -17,7 +17,8 @@ module.exports = {
           "linear-gradient(to bottom, rgba(0, 0, 0, 0), #e5e5e5), url('../public/assets/shop-hero-min.jpg')",
         'home-hero':
           'linear-gradient(to bottom, rgba(0, 0, 0, 0), #e5e5e5), url(../public/assets/home-hero-min.jpg)',
-        'home-shop': 'url(../public/assets/home-shop-min.jpg)'
+        'home-shop': 'url(../public/assets/home-shop-min.jpg)',
+        'about-bottom': 'url(../public/assets/about-photo3.jpg)'
       }
     }
   },
