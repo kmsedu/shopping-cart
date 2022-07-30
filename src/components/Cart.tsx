@@ -1,11 +1,15 @@
 import { CartProps } from '../types'
 
 export default function Cart (props: CartProps): JSX.Element {
-  const { cartItems, cartTotal } = props
+  const { cartItems, cartTotal, removeFromCart } = props
   const cartItemElements = cartItems.map(cartItem => {
     return (
       <div className='flex items-center p-2' key={cartItem.id}>
-        <button type='button' className='text-red-500 px-4'>
+        <button
+          type='button'
+          className='text-red-500 px-4'
+          onClick={() => removeFromCart(cartItem.id)}
+        >
           x
         </button>
         <img src={cartItem.imgSrc} width='50px' className='h-10 w-10' />
@@ -20,7 +24,7 @@ export default function Cart (props: CartProps): JSX.Element {
     )
   })
   return (
-    <div className='absolute right-0 top-10 z-20 flex flex-col border-t-2 border-yellow-400 bg-white shadow-lg shadow-gray-400'>
+    <div className='min-w-[350px] absolute right-0 top-10 z-20 flex flex-col border-t-2 border-yellow-400 bg-white shadow-lg shadow-gray-400'>
       {cartItemElements}
       <p className='bg-gray-200 p-2 text-right'>
         <strong>Total: </strong>${cartTotal}.00

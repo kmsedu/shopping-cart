@@ -22,6 +22,7 @@ export interface ShopItemProps extends ShopProps {
 export interface CartProps {
   cartItems: CartItem[]
   cartTotal: number
+  removeFromCart: Function
 }
 
 export interface NavbarProps {

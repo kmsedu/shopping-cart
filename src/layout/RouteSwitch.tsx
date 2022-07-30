@@ -28,6 +28,7 @@ export default function RouteSwitch (): JSX.Element {
 
   const addItemToCart = (id: string): void => {
     setCartItems(prevCartItems => {
+      setCartDisplayed(true)
       const itemToAdd = data.find(dataItem => dataItem.id === id)
 
       if (itemToAdd === undefined) throw new Error('Item not found')
@@ -50,13 +51,27 @@ export default function RouteSwitch (): JSX.Element {
     })
   }
 
+  const removeFromCart = (id: string): void => {
+    setCartItems(prevCartItems => {
+      return prevCartItems.filter(cartItem => {
+        return cartItem.id !== id
+      })
+    })
+  }
+
   const toggleDisplayCart = (): void => {
     setCartDisplayed(!cartDisplayed)
   }
 
   return (
     <BrowserRouter>
-      {cartDisplayed && <Cart cartItems={cartItems} cartTotal={cartTotal} />}
+      {cartDisplayed && (
+        <Cart
+          cartItems={cartItems}
+          cartTotal={cartTotal}
+          removeFromCart={removeFromCart}
+        />
+      )}
       <main
         onClick={() => {
           if (cartDisplayed) toggleDisplayCart()
